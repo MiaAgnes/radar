@@ -198,10 +198,55 @@ h1{
     display: flex;
     justify-content: center;
     margin-top: 0.2em;
+    margin-bottom: 0.4em;
 }
 
 .indledende-tekst-stoet{
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 1em;
+}
+
+.indledende-tekst-minder{
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 1em;
+}
+
+.img1{
+    width: 60%;
+    height: 100%;
+    margin-left: 9em;
+    margin-top: 2em;
+}
+
+.underoverskrift{
     font-size: 2em;
+    font-weight: bold;
+}
+
+.minder-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.indledende-tekst-blog{
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 1em;
+}
+
+.indledende-tekst-morten{
+    font-size: 1.8em;
     display: flex;
     justify-content: center;
     margin-left: 5em;
