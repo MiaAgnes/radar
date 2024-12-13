@@ -140,33 +140,35 @@ h2{
 
 .img-container{
     display: flex;
+    gap: 1em;
 }
 
-.img-float-left{
+.img-float-left,
+.img-float-center,
+.img-float-right {
     display: flex;
-    justify-content: flex-start;
-    width: 33.33%;
-    height: 21em;
-    margin-left: 2em;
-    flex-direction: column;
+    flex-direction: column; /* Ensures the image and text are stacked */
+    width: 33.33%; /* Each column takes up an equal width */
+    margin-left: 1.5em; /* Adjust margin as needed */
+    align-items: center; /* Center content within each column */
+    margin-right: 1.5em;
 }
 
-.img-float-center{
-    display: flex;
-    justify-content: flex-start;
-    width: 33.33%;
-    height: 20%;
-    margin-left: 1em;
-    flex-direction: column;
+.img-float-left img,
+.img-float-center img,
+.img-float-right img {
+    width: 100%; /* Ensures the images take up the full width of their container */
+    height: 30em; /* Fixes the height for uniformity */
+    object-fit: cover; /* Ensures images maintain their proportions and fill the container */
+    border-radius: 5px; /* Optional: adds rounded corners */
 }
 
-.img-float-right{
-    display: flex;
-    justify-content: flex-start;
-    width: 33.33%;
-    height: 20%;
-    margin-left: 1em;
-    flex-direction: column;
+.img-float-left p,
+.img-float-center p,
+.img-float-right p{
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
 }
 
 .minder-hero{
@@ -220,20 +222,28 @@ h1{
 }
 
 .img1{
-    width: 60%;
-    height: 100%;
+    max-width: 50%;
+    height: auto;
     margin-left: 9em;
     margin-top: 2em;
+}
+
+.minder-img1{
+    width: 50%;
+    height: auto;
+    flex: auto;
 }
 
 .underoverskrift{
     font-size: 2em;
     font-weight: bold;
+    flex: 1;
+    width: 50%;
 }
 
 .minder-container{
     display: flex;
-    flex-direction: row;
+    align-items: center;
 }
 
 .indledende-tekst-blog{
@@ -253,3 +263,78 @@ h1{
     margin-right: 5em;
     margin-bottom: 1em;
 }
+
+.lp-tekst{
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    margin-left: 7em;
+    margin-right: 7em;
+    margin-bottom: 1em;
+}
+
+h2, p {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  form {
+    max-width: 900px;
+    margin: 0 auto; /* Centrerer formen */
+    padding: 20px;   
+    display: flex;
+    flex-wrap: wrap; /* Tillader flere rækker */
+    gap: 20px; /* Mellemrum mellem felter */
+  }
+  
+  .form-group {
+    flex: 1 1 calc(50% - 20px); /* To kolonner */
+    display: flex;
+    flex-direction: column; /* Sørg for, at label står over feltet */
+  }
+  
+  label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c7d0c7;
+    border-radius: 5px;
+    color: #031839;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    outline: none;
+    border-color: #00b4d8;
+  }
+  
+  fieldset {
+    border: none;
+    width: 100%; /* Fuld bredde */
+    padding: 0;
+    margin: 0;
+  }
+  
+  legend {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #amount {
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    border: 1px solid #c7d0c7;
+    border-radius: 5px;
+    color: #c7d0c7;
+  }
