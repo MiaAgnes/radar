@@ -196,7 +196,7 @@ h3{
 }
 
 h1{
-    font-size: 4em;
+    font-size: 3.5em;
     display: flex;
     justify-content: center;
     margin-top: 0.2em;
@@ -382,6 +382,15 @@ a{
 
   .brødtekst{
     font-size: 1.6em;
+    margin-left: 5.5em;
+    margin-right: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+  }
+
+  .brødtekst2{
+    font-size: 1.6em;
     margin-left: 7.75em;
     margin-right: 4em;
     display: flex;
@@ -415,6 +424,43 @@ a{
     width: 90%;
   margin-left: 3.75em;
  }
+
+ .footer-container{
+    display: flex;
+ }
+
+ .footer-container p{
+    font-size: 1.2em;
+ }
+
+ .footer-left{
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    flex-direction: column;
+ }
+
+ .footer-right{
+    display: flex;
+    width: 50%;
+    margin: 1em;
+    flex-direction: column;
+ }
+
+ .footer-left-up{
+    margin: 1em;
+ }
+
+ .footer-left-down{
+    margin: 1em;
+ }
+
+ .some-logos{
+    width: 10vh;
+    margin-top: 1em;
+    margin-right: 6em;
+ }
+
 
   @media (max-width: 700px) {
     .form-group {
