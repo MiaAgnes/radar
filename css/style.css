@@ -133,7 +133,7 @@ hr{
     margin-top: 2em;
 }
 
-h2{
+h3{
     font-size: 2.5em;
     margin-bottom: 0.5em;
 }
@@ -200,7 +200,6 @@ h1{
     display: flex;
     justify-content: center;
     margin-top: 0.2em;
-    margin-bottom: 0.4em;
 }
 
 .indledende-tekst-stoet{
@@ -221,11 +220,9 @@ h1{
     margin-bottom: 1em;
 }
 
-.img1{
-    max-width: 50%;
+.img{
+    max-width: 100%;
     height: auto;
-    margin-left: 9em;
-    margin-top: 2em;
 }
 
 .minder-img1{
@@ -234,16 +231,20 @@ h1{
     flex: auto;
 }
 
-.underoverskrift{
+.textContainer{
     font-size: 2em;
-    font-weight: bold;
-    flex: 1;
+    display: flex;
+    justify-content: center;
     width: 50%;
+    align-self: flex-start;
+    flex-direction: column;
 }
 
 .minder-container{
     display: flex;
     align-items: center;
+    margin-left: 9em;
+    margin-right: 9em;
 }
 
 .indledende-tekst-blog{
@@ -259,7 +260,7 @@ h1{
     font-size: 1.8em;
     display: flex;
     justify-content: center;
-    margin-left: 5em;
+    margin-left: 7em;
     margin-right: 5em;
     margin-bottom: 1em;
 }
@@ -273,35 +274,38 @@ h1{
     margin-bottom: 1em;
 }
 
-h2, p {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  form {
+form {
     max-width: 900px;
     margin: 0 auto; /* Centrerer formen */
-    padding: 20px;   
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap; /* Tillader flere rækker */
-    gap: 20px; /* Mellemrum mellem felter */
+    flex-wrap: wrap; /* Tillader linjeskift på mindre skærme */
+    gap: 1.5em; /* Afstand mellem felter */
+  }
+  
+  h2 {
+    flex: 1 1 100%; /* Overskriften fylder hele bredden */
+    text-align: center; /* Juster til venstre */
+    margin-bottom: 10px;
+    font-size: 3em;
   }
   
   .form-group {
-    flex: 1 1 calc(50% - 20px); /* To kolonner */
+    flex: 1 1 calc(50% - 1.5em); /* To kolonner med plads til afstand */
     display: flex;
-    flex-direction: column; /* Sørg for, at label står over feltet */
+    flex-direction: column; /* Label over input */
   }
   
   label {
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
   }
   
   input[type="text"],
-  input[type="email"] {
+  input[type="email"],
+  #amount {
     width: 100%;
-    padding: 10px;
+    padding: 0.8em;
     border: 1px solid #c7d0c7;
     border-radius: 5px;
     color: #031839;
@@ -314,15 +318,10 @@ h2, p {
   }
   
   fieldset {
-    border: none;
-    width: 100%; /* Fuld bredde */
-    padding: 0;
+    flex: 1 1 100%; /* Fieldset fylder hele bredden */
     margin: 0;
-  }
-  
-  legend {
-    font-size: 18px;
-    margin-bottom: 10px;
+    padding: 0;
+    border: none;
   }
   
   .radio-group {
@@ -330,11 +329,98 @@ h2, p {
     flex-direction: column;
   }
   
-  #amount {
-    width: 100%;
-    padding: 10px;
-    text-align: right;
-    border: 1px solid #c7d0c7;
-    border-radius: 5px;
-    color: #c7d0c7;
+  .blog-container{
+    display: flex;
+    gap: 1em;
   }
+
+  .img1-float-left, .img2-float-right{
+    display: flex;
+    flex-direction: column; /* Ensures the image and text are stacked */
+    width: 50%; /* Each column takes up an equal width */
+    margin-left: 4em; /* Adjust margin as needed */
+    align-items: center; /* Center content within each column */
+    margin-right: 4em;
+    margin-top: 3em;
+  }
+
+  .img1-float-left img,
+.img2-float-right img {
+    width: 100%; /* Ensures the images take up the full width of their container */
+    height: 30em; /* Fixes the height for uniformity */
+    object-fit: cover; /* Ensures images maintain their proportions and fill the container */
+    border-radius: 5px; /* Optional: adds rounded corners */
+}
+
+.img1-float-left p,
+.img2-float-right p{
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.textSectionStyling{
+    display: flex; 
+    margin-left: 1.5em;
+    margin-top: 0.25em;
+    font-size: 0.8em;
+  }
+  
+  .underoverskrift{
+    display: flex;
+    justify-content: center;
+  }
+
+  .underoverskriftStyling{
+    font-weight: bold;
+  }
+
+  .brødtekst{
+    font-size: 1.6em;
+    margin-left: 7.75em;
+    margin-right: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+  }
+
+  .textSectionStyling2{
+    display: flex; 
+    margin-top: 0.25em;
+    font-size: 0.8em;
+  }
+
+  .textSectionStyling3{
+    margin-left: 2em;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+  }
+
+  .underoverskriftStyling2{
+    font-weight: bold;
+    margin-right: 2.3em;
+  }
+
+  .underoverskrift2{
+    display: flex;
+    margin-left: 1.55em;
+  }
+
+ .img1{
+    width: 90%;
+  margin-left: 3.75em;
+ }
+
+  @media (max-width: 700px) {
+    .form-group {
+      flex: 1 1 100%; /* Stabler felterne på mindre skærme */
+    }
+  }
+
+
+
