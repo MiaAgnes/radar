@@ -111,6 +111,15 @@ hr{
     height: 45em;
 }
 
+.lp-tekst{
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    margin-left: 7em;
+    margin-right: 7em;
+    margin-bottom: 1em;
+}
+
 .nav-left{
     display: flex;
 
@@ -200,9 +209,14 @@ h3{
 
 .infographic{
     display: flex;
+    display: block;
     width: 100%;
     height: 35em;
 }
+
+.infographic-lille{
+    display: none;
+   }
 
 h1{
     font-size: 3.5em;
@@ -271,15 +285,6 @@ h1{
     justify-content: center;
     margin-left: 7em;
     margin-right: 5em;
-    margin-bottom: 1em;
-}
-
-.lp-tekst{
-    font-size: 1.8em;
-    display: flex;
-    justify-content: center;
-    margin-left: 7em;
-    margin-right: 7em;
     margin-bottom: 1em;
 }
 
@@ -399,8 +404,8 @@ a{
   }
 
   .brødtekst2{
-    font-size: 1.6em;
-    margin-left: 7.75em;
+    font-size: 2em;
+    margin-left: 6.5em;
     margin-right: 4em;
     display: flex;
     flex-wrap: wrap;
@@ -505,12 +510,37 @@ a{
 
     .brødtekst{
         font-size: 2em;
-        margin-left: 6em;
+        margin-left: 4.5em;
     }
 
     .textSectionStyling2{
-        margin-left: 2em;
+        margin-left: 0;
     }
+
+    .some-logos{
+        width: 6vh;
+        margin-top: 1em;
+        margin-right: 3em;
+    }
+
+    .indledende-tekst-minder{
+        margin: 1em;
+    }
+
+    .minder-img1{
+        width: 75em;
+    }
+
+    .img{
+        width: 75em;
+    }
+
+    .textSectionStyling{
+        display: flex; 
+        margin-left: 0;
+        margin-top: 0.25em;
+        font-size: 0.8em;
+      }
  }
  /* Responsive: Show burger icon and hide menu */
 @media (max-width: 1190px) {
@@ -589,19 +619,15 @@ a{
     .img-float-right {
         display: flex;
         flex-direction: column; /* Ensures the image and text are stacked */
-        width: 100%; /* Each column takes up an equal width */
-        margin-left: 1.5em; /* Adjust margin as needed */
+        width: 85%; /* Each column takes up an equal width */
         align-items: center; /* Center content within each column */
-        margin-right: 1.5em;
     }
     
     .img-float-left img,
     .img-float-center img,
     .img-float-right img {
-        width: 50em; /* Ensures the images take up the full width of their container */
+        width: 40em; /* Ensures the images take up the full width of their container */
         height: 30em; /* Fixes the height for uniformity */
-        object-fit: cover; /* Ensures images maintain their proportions and fill the container */
-        border-radius: 5px; /* Optional: adds rounded corners */
     }
     
     .img-float-left p,
@@ -627,14 +653,150 @@ a{
         display: flex;
         justify-content: center;
         width: 100%;
-        margin-left: 0;
         font-size: 1.5em;
     }
     .some-logos{
-        width: 3vh;
+        width: 4.5vh;
         margin-top: 1em;
-        margin-right: 2em;
+        margin-right: 2.5em;
      }
+
+     .blog-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .img1-float-left, .img2-float-right{
+        display: flex;
+        flex-direction: column; /* Ensures the image and text are stacked */
+        width: 60%; /* Each column takes up an equal width */
+        align-items: center; /* Center content within each column */
+      }
+    
+      .img1-float-left img,
+    .img2-float-right img {
+        width: 45em; /* Ensures the images take up the full width of their container */
+        height: 30em; /* Fixes the height for uniformity */
+        object-fit: cover; /* Ensures images maintain their proportions and fill the container */
+        border-radius: 5px; /* Optional: adds rounded corners */
+    }
+    
+    .img1-float-left p,
+    .img2-float-right p{
+        font-size: 1.8em;
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+    }
+
+    .morten{
+        display: flex;
+        margin-left: 12.5em;
+    }
+
+    .indledende-tekst-minder{
+        margin: 1em;
+    }
+
+    .minder-img1{
+        width: 55em;
+    }
+
+    .img{
+        width: 55em;
+    }
+    
 }
 
- 
+ @media(max-width: 900px){
+    .form-group {
+        flex: 1 1 100%; /* Gør hvert form-group element fuld bredde */
+      }
+
+      .lp-tekst{
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+
+      .lp{
+        margin-left: 3em;
+      }
+    
+    .textContainer{
+        font-size: 2.5em;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+    }
+    
+    .minder-container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 9em;
+        margin-right: 9em;
+    }
+
+   .infographic{
+    display: none;
+   }
+
+   .infographic-lille{
+    display: flex;
+    display: block;
+    width: 100%;
+    height: 35em;
+   }
+
+   .some-logos{
+    width: 2.5vh;
+    margin-top: 1em;
+    margin-right: 2.5em;
+ }
+
+    .indledende-tekst-stoet{
+        margin: 1em;
+    }
+
+    .indledende-tekst-blog{
+        margin: 1em;
+    }
+
+    .indledende-tekst-minder{
+        margin: 1em;
+    }
+
+    .minder-img1{
+        width: 40em;
+    }
+
+    .img{
+        width: 40em;
+    }
+}
+
+@media(max-width:650px){
+    .img-float-left img,
+    .img-float-center img,
+    .img-float-right img {
+        width: 25em; /* Ensures the images take up the full width of their container */
+        height: 30em; /* Fixes the height for uniformity */
+    }
+    .indledende-tekst-minder{
+        margin: 1em;
+    }
+
+    .textSection{
+        margin: 0;
+    }
+
+    .brødtekst2{
+        margin: 1;
+    }
+
+    .minder-img1{
+        width: 30em;
+    }
+}
