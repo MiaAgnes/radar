@@ -8,49 +8,45 @@
 </head>
 <body>
     <header>
-        <input type="checkbox" id="menu-bar">
-        <label for="menu-bar">Menu</label>
-
         <nav class="navbar">
             <article class="logo-container">
-                <a href="/index.html"><img src="../img/logo.webp" class="logo" alt="Logo med teksten Radar"></a>
+                <a href="../index.html">
+                    <img src="../img/logo.webp" class="logo" alt="Logo med teksten Radar">
+                </a>
             </article>
+            <!-- Checkbox for burger-menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+            <!--mobilmenu-->
+            <label for="menu-toggle" class="menu-icon">☰</label>
             <article class="nav-left">
-            <ul>
-                <li><a href="#">Koncerter</a>
                 <ul>
-                    <li><a href="#">Tidligere koncerter</a></li>
-                    <li><a href="#">Kommende koncerter</a></li>
+                    <li><a href="#">Koncerter</a>
+                        <ul>
+                            <li><a href="#">Tidligere koncerter</a></li>
+                            <li><a href="#">Kommende koncerter</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="minder.html">Minder</a></li>
+                    <li><a href="blog.html">Blog</a>
+                        <ul>
+                            <li><a href="blog-morten.html">Blogindlæg fra Morten</a></li>
+                            <li><a href="#">Blogindlæg fra Elisa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="stoet-radar.html">Støt Radar</a></li>
+                    <li><a href="#">Frivillig</a></li>
+                    <li><a href="#">Informationer</a>
+                        <ul>
+                            <li><a href="#">Parkering</a></li>
+                            <li><a href="#">Kend stedet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Om os</a>
+                        <ul>
+                            <li><a href="#">Kontakt os</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                </li>
-                <li><a href="#">Minder</a></li>
-                <li><a href="blog.html">Blog</a>
-                <ul>
-                    <li><a href="blog-morten.html">Blogindlæg fra Morten</a></li>
-                    <li><a href="#">Blogindlæg fra Elisa</a></li>
-                </ul>
-                </li>
-           
-                <li><a href="stoet-radar.html">Støt Radar</a></li>
-                <li><a href="#">Frivillig</a></li>
-                <li><a href="#">Informationer</a>
-                <ul>
-                    <li><a href="#">Parkering</a></li>
-                    <li><a href="#">Kend stedet</a></li>
-                </ul>
-                </li>
-                <li><a href="#">Om os</a>
-                <ul>
-                    <li><a href="#">Kontakt os</a></li>
-                </ul>
-            </li>
-            </ul>
-        </article>
-        <article class="nav-right">
-            <ul>
-                <li><a href="#">Log in</a></li>
-            </ul>
-        </article>
         </nav>
     </header>
     <hr>
@@ -72,13 +68,13 @@
             </section>
             <section class="textSection">
                 <p class="textSectionStyling">
-                    Søskendeorkestret Døssing leverede en fantastisk aften på Radar, hvor de blandede nordisk jazz med lounge og dub. Deres lyd, der kombinerer akustiske og elektroniske elementer, skabte en unik og stemningsfuld oplevelse med luftige blæseinstrumenter, legesyg percussion og bassede synthesizers. Med debutalbummet All Inclusive i ryggen og anderkendelse fra både GAFFA og P8 JAZZ, bekræftede Døssig deres status som en af Danmarks mest spændende jazzcats. Med den nye trompetspiller Annestine Døssig og</p>
+                    Søskendeorkestret Døssing leverede en fantastisk aften på Radar, hvor de blandede nordisk jazz med lounge og dub. Deres lyd, der kombinerer akustiske og elektroniske elementer, skabte en unik og stemningsfuld oplevelse med luftige blæseinstrumenter, legesyg percussion og bassede synthesizers. Med debutalbummet All Inclusive i ryggen og anderkendelse fra både GAFFA og P8 JAZZ, bekræftede Døssig deres status som en af Danmarks mest spændende jazzcats.</p>
             </section>
         </aside>
     </article>
     <article>
         <aside >
-        <p class="brødtekst">Thit Helbo Møller på percussion, var orkesteret stærkere end nogensinde. Det var en aften fyldt med magisk musik og nye, inspirrerende toner.</p>
+        <p class="brødtekst">Med den nye trompetspiller Annestine Døssig og Thit Helbo Møller på percussion, var orkesteret stærkere end nogensinde. Det var en aften fyldt med magisk musik og nye, inspirrerende toner.</p>
         </aside>
     </article>
     <article class="minder-container">
@@ -89,7 +85,7 @@
                 </p>
             </section>
             <section class="textSection">
-                <p class="textSectionStyling2">I august 2024 indtog kunstnerkollektivet SOLEN ER SEXET Radar med en performativ opsætning af deres debutalbum fra 2022. Forestillingen, der hylder kroppen og naturen med alt dens lys og mørke, var en twistet version af musicalgenren, der smeltede hjertet. Albummet solen er sexet høstede anmelderros, bl.a fra GAFFA, der beskrev det som et univers, hvor solen skinner sexet og naturen er i centrum. Denne unikke optræden blev</p>
+                <p class="textSectionStyling2">I august 2024 indtog kunstnerkollektivet SOLEN ER SEXET Radar med en performativ opsætning af deres debutalbum fra 2022. Forestillingen, der hylder kroppen og naturen med alt dens lys og mørke, var en twistet version af musicalgenren, der smeltede hjertet. Albummet solen er sexet høstede anmelderros, bl.a fra GAFFA, der beskrev det som et univers, hvor solen skinner sexet og naturen er i centrum.</p>
             </section>
         </aside>
         <aside>
@@ -98,7 +94,7 @@
     </article>
     <article>
         <aside >
-        <p class="brødtekst">udviklet af Lise Westzynthius, Rin og Marie Kim, og medvirkende var et stærkt hold af kunstnere. Som en del af deres residency på Radar, blev SOLEN ER SEXET en del af vores netværksscene for tværæstetisk kunst, støttet af Statens Kunstfond. Vi glædede os til at være med til at opleve denne eksklusive uropførsel.</p>
+        <p class="brødtekst">Denne unikke optræden blev udviklet af Lise Westzynthius, Rin og Marie Kim, og medvirkende var et stærkt hold af kunstnere. Som en del af deres residency på Radar, blev SOLEN ER SEXET en del af vores netværksscene for tværæstetisk kunst, støttet af Statens Kunstfond. Vi glædede os til at være med til at opleve denne eksklusive uropførsel.</p>
         </aside>
     </article>
     <article class="minder-container">
@@ -111,13 +107,13 @@
             </section>
             <section class="textSection">
                 <p class="textSectionStyling">
-                    Vi husker stadig den fantastiske oplevelse, da Skrallebang indtog Radar. Det var en oplevelse, der virkelig satte sig fast i hukommelsen. Børnene blev inddraget i musikken gennem leg, bevægelse og sjove historier, og man kunne mærke, hvordan sanserne blev skærpede, mens vi alle blev fanget af den magiske stemning. Koncerten var en perfekt blanding af musik, motorik og læring, og både børn, pædagoger og lærere blev inspirreret til at synge, spille og lege på nye måder. Skrallebang, med Nana Bang Kirkegaard og Søren Jensen i</p>
+                    Vi husker stadig den fantastiske oplevelse, da Skrallebang indtog Radar. Det var en oplevelse, der virkelig satte sig fast i hukommelsen. Børnene blev inddraget i musikken gennem leg, bevægelse og sjove historier, og man kunne mærke, hvordan sanserne blev skærpede, mens vi alle blev fanget af den magiske stemning. Koncerten var en perfekt blanding af musik, motorik og læring, og både børn, pædagoger og lærere blev inspirreret til at synge, spille og lege på nye måder.</p>
             </section>
         </aside>
     </article>
     <article>
         <aside >
-        <p class="brødtekst">front, formåede at levere en anderledes og kvalitetsfuld børnemusikoplevelse med rigtige instrumenter og et professionelt setup, præcis som de voksne oplever til koncerter. Det var en oplevelse, der vækkede børns fantasi og gav os alle en dag fyldt med grin, læring og musik. Det var virkelig en særlig dag på Radar.</p>
+        <p class="brødtekst">Skrallebang, med Nana Bang Kirkegaard og Søren Jensen i front, formåede at levere en anderledes og kvalitetsfuld børnemusikoplevelse med rigtige instrumenter og et professionelt setup, præcis som de voksne oplever til koncerter. Det var en oplevelse, der vækkede børns fantasi og gav os alle en dag fyldt med grin, læring og musik. Det var virkelig en særlig dag på Radar.</p>
         </aside>
     </article>
     <hr>

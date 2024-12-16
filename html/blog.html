@@ -8,49 +8,45 @@
 </head>
 <body>
     <header>
-        <input type="checkbox" id="menu-bar">
-        <label for="menu-bar">Menu</label>
-
         <nav class="navbar">
             <article class="logo-container">
-                <a href="/index.html"><img src="../img/logo.webp" class="logo" alt="Logo med teksten Radar"></a>
+                <a href="../index.html">
+                    <img src="../img/logo.webp" class="logo" alt="Logo med teksten Radar">
+                </a>
             </article>
+            <!-- Checkbox for burger-menu -->
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+            <!--mobilmenu-->
+            <label for="menu-toggle" class="menu-icon">☰</label>
             <article class="nav-left">
-            <ul>
-                <li><a href="#">Koncerter</a>
                 <ul>
-                    <li><a href="#">Tidligere koncerter</a></li>
-                    <li><a href="#">Kommende koncerter</a></li>
+                    <li><a href="#">Koncerter</a>
+                        <ul>
+                            <li><a href="#">Tidligere koncerter</a></li>
+                            <li><a href="#">Kommende koncerter</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="minder.html">Minder</a></li>
+                    <li><a href="blog.html">Blog</a>
+                        <ul>
+                            <li><a href="blog-morten.html">Blogindlæg fra Morten</a></li>
+                            <li><a href="#">Blogindlæg fra Elisa</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="stoet-radar.html">Støt Radar</a></li>
+                    <li><a href="#">Frivillig</a></li>
+                    <li><a href="#">Informationer</a>
+                        <ul>
+                            <li><a href="#">Parkering</a></li>
+                            <li><a href="#">Kend stedet</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Om os</a>
+                        <ul>
+                            <li><a href="#">Kontakt os</a></li>
+                        </ul>
+                    </li>
                 </ul>
-                </li>
-                <li><a href="minder.html">Minder</a></li>
-                <li><a href="#">Blog</a>
-                <ul>
-                    <li><a href="blog-morten.html">Blogindlæg fra Morten</a></li>
-                    <li><a href="#">Blogindlæg fra Elisa</a></li>
-                </ul>
-                </li>
-           
-                <li><a href="stoet-radar.html">Støt Radar</a></li>
-                <li><a href="#">Frivillig</a></li>
-                <li><a href="#">Informationer</a>
-                <ul>
-                    <li><a href="#">Parkering</a></li>
-                    <li><a href="#">Kend stedet</a></li>
-                </ul>
-                </li>
-                <li><a href="#">Om os</a>
-                <ul>
-                    <li><a href="#">Kontakt os</a></li>
-                </ul>
-            </li>
-            </ul>
-        </article>
-        <article class="nav-right">
-            <ul>
-                <li><a href="#">Log in</a></li>
-            </ul>
-        </article>
         </nav>
     </header>
     <hr>
