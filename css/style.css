@@ -82,7 +82,16 @@ header .navbar ul li:hover > ul {
     display: block; 
 }
 
-#menu-bar{
+.menu-checkbox{
+    display: none;
+}
+
+/* burger menu */
+#menu-bar {
+    display: none;
+  }
+
+.menu-icon{
     display: none;
 }
 
@@ -104,7 +113,7 @@ hr{
 
 .nav-left{
     display: flex;
-    justify-content: flex-start;
+
 }
 
 .nav-right {
@@ -462,11 +471,136 @@ a{
  }
 
 
-  @media (max-width: 700px) {
-    .form-group {
-      flex: 1 1 100%; /* Stabler felterne på mindre skærme */
+ @media(max-width: 1976px){
+    .some-logos{
+        width: 6vh;
+        margin-top: 1em;
+        margin-right: 2em;
+     }
+ }
+ /* Responsive: Show burger icon and hide menu */
+@media (max-width: 1190px) {
+
+    .navbar{
+        justify-content: space-between;
     }
-  }
 
+    .menu-icon {
+        display: flex; /* Show burger icon */
+        justify-items: flex-end;
+        font-size: 2em;
+        align-self: center;
+        
+    }
 
+    .nav-right{
+        display: none;
+    }
 
+    .nav-left {
+        display: none; /* Hide menu initially */
+
+    }
+
+    /* Toggle menu visibility when checkbox is checked */
+    .menu-checkbox:checked ~ .nav-left {
+        display: flex;
+        position: absolute;
+        right: 0;
+    
+    }
+
+    header .navbar ul {
+        width: auto;
+        background-color: #031839;
+    }
+
+    .nav-left ul {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        flex-direction: column;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .nav-left ul li {
+        text-align: center;
+    }
+
+    .nav-left ul li a {
+        text-decoration: none;
+        color: #9bc19f;
+        padding: 1em;
+        display: block;
+    }
+
+    .nav-left ul li a:hover {
+        background: #9bc19f;
+        color: #031839;
+    }
+
+    .menu-checkbox:checked ~ .nav-right{
+        display: block;
+        position: absolute;
+        top: 400px;
+        right: 0;
+        width: auto;
+    }
+
+    .img-float-left,
+    .img-float-center,
+    .img-float-right {
+        display: flex;
+        flex-direction: column; /* Ensures the image and text are stacked */
+        width: 100%; /* Each column takes up an equal width */
+        margin-left: 1.5em; /* Adjust margin as needed */
+        align-items: center; /* Center content within each column */
+        margin-right: 1.5em;
+    }
+    
+    .img-float-left img,
+    .img-float-center img,
+    .img-float-right img {
+        width: 50em; /* Ensures the images take up the full width of their container */
+        height: 30em; /* Fixes the height for uniformity */
+        object-fit: cover; /* Ensures images maintain their proportions and fill the container */
+        border-radius: 5px; /* Optional: adds rounded corners */
+    }
+    
+    .img-float-left p,
+    .img-float-center p,
+    .img-float-right p{
+        font-size: 2.25em;
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+    }
+
+    .img-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .flex-float-right{
+        display: none;
+    }
+
+    .flex-float-left{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;
+        font-size: 1.5em;
+    }
+    .some-logos{
+        width: 3vh;
+        margin-top: 1em;
+        margin-right: 2em;
+     }
+}
+
+ 
