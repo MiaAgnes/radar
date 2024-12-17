@@ -10,13 +10,13 @@ body{
 }
 
 header{
-    position: sticky; /* Gør headeren fastgjort øverst på skærmen, når man scroller */
+    position: sticky;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Fordeler pladsen mellem børnene med lige meget plads imellem */
+    justify-content: space-between; /* laver plads mellem menupunkterne */
     background-color: #031839;
 }
-
+/* navbar */
 .logo-container{
    display: flex;
    justify-content: center;
@@ -29,9 +29,9 @@ header{
 }
 
 .navbar {
-    display: flex; /* Bruger flexbox til at sætte menuen horisontalt */
+    display: flex; /* sætter menuen horisontalt */
     padding: 1em 2em;
-    width: 100%; /* Fylder hele bredden af headeren */
+    width: 100%; /* fylder hele bredden af headeren */
 }
 
 header .navbar ul{
@@ -39,20 +39,20 @@ header .navbar ul{
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end; /* får menupunkterne til at stå til højre for logoet*/
     
 }
 
 header .navbar ul li{
-    position: relative;
+    position: relative; /* dropdown menu*/
     float: left;
     background-color: #031839;
     text-wrap-mode: nowrap;
 }
 
 header .navbar ul li a{
-    text-decoration: none;
-    font-size: 1.5em;
+    text-decoration: none; /* fjerner understegning fra links*/
+    font-size: 1.5em; /* tekststørrelse*/
     padding: 18px;
     color: #9bc19f;
     display: block;
@@ -65,12 +65,8 @@ header .navbar ul li a:hover{
 
 header .navbar ul li ul{
     position: absolute; 
-    width: 200px;
-    display: none; 
-}
-
-header .navbar ul li ul li{
-    border-top: 1px solid rgba(0,0,0,0.1);
+    width: 200px; /* bredden på dropdown menu */
+    display: none; /* skjuler menuen */
 }
 
 header .navbar ul li ul li ul{
@@ -79,11 +75,16 @@ header .navbar ul li ul li ul{
 
 header .navbar ul li:focus-within > ul,
 header .navbar ul li:hover > ul {
-    display: block; 
+    display: block; /* viser dropdown menu */
+}
+
+.nav-left{
+    display: flex;
+
 }
 
 .menu-checkbox{
-    display: none;
+    display: none; /* skjuler checkboks */
 }
 
 /* burger menu */
@@ -92,7 +93,7 @@ header .navbar ul li:hover > ul {
   }
 
 .menu-icon{
-    display: none;
+    display: none; /* skjuler burgermenuen som standard*/
 }
 
 header label{
@@ -101,11 +102,13 @@ header label{
     display: none;
 }
 
+/* den grønne linje */
 hr{
     background-color: #9bc19f;
     height: 0.5em;
 }
 
+/* landingpage billeder og tekst */
 .lp-img{
     width: 100%;
     height: 45em;
@@ -114,21 +117,10 @@ hr{
 .lp-tekst{
     font-size: 1.8em;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* centrerer teksten med flexbox*/
     margin-left: 7em;
     margin-right: 7em;
     margin-bottom: 1em;
-}
-
-.nav-left{
-    display: flex;
-
-}
-
-.nav-right {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
 }
 
 .generic-flex-container {
@@ -143,13 +135,20 @@ hr{
     margin-top: 2em;
 }
 
-.flex-float-right{
+h1{
+    font-size: 3.5em;
     display: flex;
-    justify-content: flex-end;
-    width: 50%;
-    margin-right: 2em;
-    margin-top: 2em;
-}
+    justify-content: center;
+    margin-top: 0.2em;
+} 
+
+h2 {
+    flex: 1 1 100%; /* Overskriften fylder hele bredden */
+    text-align: center; 
+    margin-bottom: 10px;
+    font-size: 3em;
+  }
+  
 
 h3{
     font-size: 2.5em;
@@ -158,27 +157,27 @@ h3{
 
 .img-container{
     display: flex;
-    gap: 1em;
+    gap: 1em; /* laver mellemrum mellem billederne*/
 }
 
 .img-float-left,
 .img-float-center,
 .img-float-right {
     display: flex;
-    flex-direction: column; /* Ensures the image and text are stacked */
-    width: 33.33%; /* Each column takes up an equal width */
-    margin-left: 1.5em; /* Adjust margin as needed */
-    align-items: center; /* Center content within each column */
+    flex-direction: column; /* sætter billederne horisontalt */
+    width: 33.33%; /* hver billede tager 33.3% af pladsen */
+    margin-left: 1.5em; 
+    align-items: center; /* centrerer teksten under hver kolonne */
     margin-right: 1.5em;
 }
 
 .img-float-left img,
 .img-float-center img,
 .img-float-right img {
-    width: 100%; /* Ensures the images take up the full width of their container */
-    height: 30em; /* Fixes the height for uniformity */
-    object-fit: cover; /* Ensures images maintain their proportions and fill the container */
-    border-radius: 5px; /* Optional: adds rounded corners */
+    width: 100%; 
+    height: 30em; /* billederne er samme højde */
+    object-fit: cover; 
+    border-radius: 5px; /* runder hjørnerne på billederne */
 }
 
 .img-float-left p,
@@ -189,6 +188,7 @@ h3{
     margin-top: 0.5em;
 }
 
+/* hero images */
 .minder-hero{
     display: flex;
     width: 100%;
@@ -215,16 +215,12 @@ h3{
 }
 
 .infographic-lille{
-    display: none;
+    display: none; /* skjuler billedet når det ikke er i sit breakpoint */
    }
 
-h1{
-    font-size: 3.5em;
-    display: flex;
-    justify-content: center;
-    margin-top: 0.2em;
-}
-
+/* indledende tekster */
+.indledende-tekst-minder, 
+.indledende-tekst-blog,
 .indledende-tekst-stoet{
     font-size: 1.8em;
     display: flex;
@@ -234,15 +230,16 @@ h1{
     margin-bottom: 1em;
 }
 
-.indledende-tekst-minder{
+.indledende-tekst-morten{
     font-size: 1.8em;
     display: flex;
     justify-content: center;
-    margin-left: 5em;
+    margin-left: 7em;
     margin-right: 5em;
     margin-bottom: 1em;
 }
 
+/* minder siden */
 .img{
     max-width: 100%;
     height: auto;
@@ -270,44 +267,20 @@ h1{
     margin-right: 9em;
 }
 
-.indledende-tekst-blog{
-    font-size: 1.8em;
-    display: flex;
-    justify-content: center;
-    margin-left: 5em;
-    margin-right: 5em;
-    margin-bottom: 1em;
-}
-
-.indledende-tekst-morten{
-    font-size: 1.8em;
-    display: flex;
-    justify-content: center;
-    margin-left: 7em;
-    margin-right: 5em;
-    margin-bottom: 1em;
-}
-
+/* form på støt radar siden*/
 form {
     max-width: 900px;
-    margin: 0 auto; /* Centrerer formen */
+    margin: 0 auto; /* centrerer formen */
     padding: 20px;
     display: flex;
-    flex-wrap: wrap; /* Tillader linjeskift på mindre skærme */
-    gap: 1.5em; /* Afstand mellem felter */
-  }
-  
-  h2 {
-    flex: 1 1 100%; /* Overskriften fylder hele bredden */
-    text-align: center; /* Juster til venstre */
-    margin-bottom: 10px;
-    font-size: 3em;
+    flex-wrap: wrap; /* wrapper teksten når skærmen bliver mindre */
+    gap: 1.5em; /* afstand mellem felter */
   }
   
   .form-group {
-    flex: 1 1 calc(50% - 1.5em); /* To kolonner med plads til afstand */
+    flex: 1 1 calc(50% - 1.5em); /* to kolonner med plads til afstand */
     display: flex;
-    flex-direction: column; /* Label over input */
+    flex-direction: column; 
   }
   
   label {
@@ -320,7 +293,7 @@ form {
   #amount {
     width: 100%;
     padding: 0.8em;
-    border: 1px solid #c7d0c7;
+    border: 2px solid #c7d0c7; /* sætter en lille skygge på kolonnerne*/
     border-radius: 5px;
     color: #031839;
   }
@@ -343,6 +316,7 @@ form {
     flex-direction: column;
   }
   
+  /* blog siden */
   .blog-container{
     display: flex;
     gap: 1em;
@@ -350,20 +324,20 @@ form {
 
   .img1-float-left, .img2-float-right{
     display: flex;
-    flex-direction: column; /* Ensures the image and text are stacked */
-    width: 50%; /* Each column takes up an equal width */
-    margin-left: 4em; /* Adjust margin as needed */
-    align-items: center; /* Center content within each column */
+    flex-direction: column; 
+    width: 50%; /* hver kolonne tager 50% af pladsen*/
+    margin-left: 4em; 
+    align-items: center; 
     margin-right: 4em;
     margin-top: 3em;
   }
 
   .img1-float-left img,
 .img2-float-right img {
-    width: 100%; /* Ensures the images take up the full width of their container */
-    height: 30em; /* Fixes the height for uniformity */
-    object-fit: cover; /* Ensures images maintain their proportions and fill the container */
-    border-radius: 5px; /* Optional: adds rounded corners */
+    width: 100%; 
+    height: 30em; 
+    object-fit: cover; 
+    border-radius: 5px; 
 }
 
 .img1-float-left p,
@@ -373,11 +347,13 @@ form {
     margin-top: 0.5em;
 }
 
+/* link */
 a{
     text-decoration: none;
     color: inherit;
 }
 
+/* styling af tekst på minder og mortens blog */
 .textSectionStyling{
     display: flex; 
     margin-left: 1.5em;
@@ -436,9 +412,10 @@ a{
 
  .img1{
     width: 90%;
-  margin-left: 3.75em;
+    margin-left: 3.75em;
  }
 
+ /* footer styling */
  .footer-container{
     display: flex;
  }
@@ -449,8 +426,8 @@ a{
 
  .footer-left{
     display: flex;
-    width: 50%;
-    justify-content: flex-start;
+    width: 50%; /* får footeren til at dele sige lige op */
+    justify-content: flex-start; /* sætter teksten til højre */
     flex-direction: column;
  }
 
@@ -470,12 +447,12 @@ a{
  }
 
  .some-logos{
-    width: 6vh;
+    width: 6vh; /* størrelse på logoerne*/
     margin-top: 1em;
-    margin-right: 6em;
+    margin-right: 6em; /* afstanden mellem logoerne */
  }
 
-
+/* media queries*/
  @media(max-width: 1600px){
     .img{
         max-width: 100%;
