@@ -452,7 +452,7 @@ a{
     margin-right: 6em; /* afstanden mellem logoerne */
  }
 
-/* media queries*/
+/* media queries*/ /* første breakpoint */
  @media(max-width: 1600px){
     .img{
         max-width: 100%;
@@ -519,30 +519,26 @@ a{
         font-size: 0.8em;
       }
  }
- /* Responsive: Show burger icon and hide menu */
+ /* breakpoint 2 */
 @media (max-width: 1190px) {
 
+    /* burgermenu */
     .navbar{
         justify-content: space-between;
     }
 
     .menu-icon {
-        display: flex; /* Show burger icon */
+        display: flex; /* burger menuen bliver vist*/
         justify-items: flex-end;
         font-size: 2em;
         align-self: center;
     }
 
-    .nav-right{
-        display: none;
-    }
-
     .nav-left {
-        display: none; /* Hide menu initially */
+        display: none; /* Skjuler den originale menu */
 
     }
 
-    /* Toggle menu visibility when checkbox is checked */
     .menu-checkbox:checked ~ .nav-left {
         display: flex;
         position: absolute;
@@ -552,7 +548,7 @@ a{
 
     header .navbar ul {
         width: auto;
-        background-color: #031839;
+        background-color: #031839; /* sætter baggrunde på menupunkterne til en mørk blå*/
     }
 
     .nav-left ul {
@@ -590,20 +586,21 @@ a{
         width: auto;
     }
 
+    /* billeder på landingpage*/
     .img-float-left,
     .img-float-center,
     .img-float-right {
         display: flex;
-        flex-direction: column; /* Ensures the image and text are stacked */
-        width: 85%; /* Each column takes up an equal width */
-        align-items: center; /* Center content within each column */
+        flex-direction: column;
+        width: 85%; /* sat width ned til kun at tage 85% pldas */
+        align-items: center; 
     }
     
     .img-float-left img,
     .img-float-center img,
     .img-float-right img {
-        width: 40em; /* Ensures the images take up the full width of their container */
-        height: 30em; /* Fixes the height for uniformity */
+        width: 40em; 
+        height: 30em; 
     }
     
     .img-float-left p,
@@ -622,17 +619,17 @@ a{
     }
 
     .flex-float-right{
-        display: none;
+        display: none; /* gør teksten usynlig*/
     }
 
     .flex-float-left{
         display: flex;
-        justify-content: center;
+        justify-content: center; /* centrerer teksten nu når den anden tekst er fjernet*/
         width: 100%;
         font-size: 1.5em;
     }
     .some-logos{
-        width: 4.5vh;
+        width: 4.5vh; /* ændrer størrelse på logoerne */
         margin-top: 1em;
         margin-right: 2.5em;
      }
@@ -645,17 +642,17 @@ a{
     
       .img1-float-left, .img2-float-right{
         display: flex;
-        flex-direction: column; /* Ensures the image and text are stacked */
-        width: 60%; /* Each column takes up an equal width */
-        align-items: center; /* Center content within each column */
+        flex-direction: column; 
+        width: 60%; 
+        align-items: center; 
       }
     
       .img1-float-left img,
     .img2-float-right img {
-        width: 45em; /* Ensures the images take up the full width of their container */
-        height: 30em; /* Fixes the height for uniformity */
-        object-fit: cover; /* Ensures images maintain their proportions and fill the container */
-        border-radius: 5px; /* Optional: adds rounded corners */
+        width: 45em; 
+        height: 30em; 
+        object-fit: cover; 
+        border-radius: 5px; 
     }
     
     .img1-float-left p,
@@ -684,11 +681,12 @@ a{
     
 }
 
+/* breakpoint 3 */
  @media(max-width: 900px){
     .form-group {
         flex: 1 1 100%; /* Gør hvert form-group element fuld bredde */
       }
-
+      /* ændrer teksten og billederne på landingpage*/
       .lp-tekst{
         margin-left: 2em;
         margin-right: 2em;
@@ -716,7 +714,7 @@ a{
     }
 
    .infographic{
-    display: none;
+    display: none; /* gør den første infographic usynlig, så den nye kan blive vist*/
    }
 
    .infographic-lille{
@@ -727,11 +725,12 @@ a{
    }
 
    .some-logos{
-    width: 2.5vh;
+    width: 2.5vh; /* logoerne bliver endnu mindre */
     margin-top: 1em;
     margin-right: 2.5em;
  }
 
+    /* gør margin mindre*/ 
     .indledende-tekst-stoet{
         margin: 1em;
     }
@@ -753,12 +752,13 @@ a{
     }
 }
 
+/* breakpoint 4 */
 @media(max-width:650px){
     .img-float-left img,
     .img-float-center img,
     .img-float-right img {
-        width: 25em; /* Ensures the images take up the full width of their container */
-        height: 30em; /* Fixes the height for uniformity */
+        width: 25em; 
+        height: 30em; 
     }
     .indledende-tekst-minder{
         margin: 1em;
@@ -766,10 +766,6 @@ a{
 
     .textSection{
         margin: 0;
-    }
-
-    .brødtekst2{
-        margin: 1;
     }
 
     .minder-img1{
