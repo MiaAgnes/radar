@@ -135,6 +135,14 @@ hr{
     margin-top: 2em;
 }
 
+.flex-float-right{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    margin-right: 2em;
+    margin-top: 2em;
+}
+
 h1{
     font-size: 3.5em;
     display: flex;
